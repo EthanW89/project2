@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS beers;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) UNIQUE,
+  password_digest VARCHAR(255)
+);
+
+
+CREATE TABLE beers (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL UNIQUE,
+  description TEXT NOT NULL
+);
+
+CREATE TABLE comments (
+  id SERIAL PRIMARY KEY,
+  comment TEXT,
+  beer_id VARCHAR REFERENCES beers(name) NOT NULL,
+  user_id VARCHAR REFERENCES users(email) NOT NULL
+);

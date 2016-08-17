@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>beer</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/css/normalize.css">
+  <link rel="stylesheet" href="css/css/skeleton.css">
+  <link rel="stylesheet" href="css/css/style.css">
+<!-- SCRIPT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+
+<div class="two rows">
+  <div id="title" class="nine columns"><h4>Welcome {{email}}, to Beer Something!</h4></div>
+  <div id ="logout"class="three columns"><a href="/sessions/logout">Sign Out</a></div>
+</div>
+
+<form>
+  <input class="nine columns" placeholder="search for beer" id="postText"></input>
+  <button class="two columns button-primary" id="submit">search</button>
+</form>
+
+<div class="row 1">
+  <div class="nine columns" id="search">Search for a beer!</div>
+</div>
+
+<div class="twelve columns" id="info"></div>
+
+
+<button id="saveBeer">Write about this beer</button>
+<input class="email" type="hidden" value="{{ email }}" />
+
+</div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
